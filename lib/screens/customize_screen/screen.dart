@@ -32,7 +32,7 @@ class CustomizeScreen extends StatelessWidget {
 
           GestureDetector(
             onTap: () {
-              Get.toNamed('/login');
+              Get.toNamed('/intro');
             },
             child: Container(
               height: 50,

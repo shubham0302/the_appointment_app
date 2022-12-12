@@ -22,7 +22,7 @@ class FreeColor extends StatelessWidget {
             const LabelText(text: CScreenLabels.freeColorTitleText),
             GlobalPadding(
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 50),
+                padding: const EdgeInsets.symmetric(horizontal: 50),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
@@ -33,12 +33,17 @@ class FreeColor extends StatelessWidget {
                           // Get.toNamed('/intro');
                         },
                         child: Container(
-                          padding: EdgeInsets.all(2),
+                          padding: const EdgeInsets.all(2),
                           height: 44,
                           width: 44,
                           decoration: BoxDecoration(
                               border: Border.all(
                                 width: 2,
+                                color: (!themeController.isDark
+                                    ? ColorSchemeData
+                                        .themeData['red']!['primaryColor']
+                                    : ColorSchemeData.darkThemeData['red']![
+                                        'primaryColor'])!,
                               ),
                               borderRadius: BorderRadius.circular(22)),
                           child: Container(
@@ -64,17 +69,19 @@ class FreeColor extends StatelessWidget {
                           // Get.toNamed('/intro');
                         },
                         child: Container(
-                          height: 40,
-                          width: 40,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(25),
-                            color: !themeController.isDark
-                                ? ColorSchemeData
-                                    .themeData['green']!['primaryColor']
-                                : ColorSchemeData
-                                    .darkThemeData['green']!['primaryColor'],
+                          child: Container(
+                            height: 40,
+                            width: 40,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(25),
+                              color: !themeController.isDark
+                                  ? ColorSchemeData
+                                      .themeData['green']!['primaryColor']
+                                  : ColorSchemeData
+                                      .darkThemeData['green']!['primaryColor'],
+                            ),
+                            // child: Icon(Icons.arrow_forward_ios_rounded),
                           ),
-                          // child: Icon(Icons.arrow_forward_ios_rounded),
                         ),
                       ),
                     ),

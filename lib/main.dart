@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:appointment_app/screens/customize_screen/screen.dart';
-import 'package:appointment_app/screens/register%20screen/login_screen.dart';
+import 'package:appointment_app/screens/intro_screen.dart';
 import 'package:appointment_app/screens/register%20screen/register_as.dart';
 import 'package:appointment_app/splash_screen.dart';
 import 'package:appointment_app/theme/theme_data.dart';
@@ -58,6 +58,6 @@ class Routes {
     GetPage(name: '/', page: () => const SplashScreen()),
     GetPage(name: '/customize', page: () => const CustomizeScreen()),
     GetPage(name: '/register-as', page: () => const RegisterAsScreen()),
-    GetPage(name: "/login", page: () => const LoginScreen())
+    GetPage(name: '/intro', page: () => const IntroScreen()),
   ];
 }

@@ -13,7 +13,7 @@ class ColorSchemeData {
   };
   static Map<String, Map<String, Color>> themeData = {
     'red': {
-      "primaryColor": Colors.red,
+      "primaryColor": Color(0xff109DA4),
       "lightPrimary": Colors.red.shade100,
     },
     'green': {

@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 
-
 import '../theme_config.dart';
 
 class InputField extends StatelessWidget {
@@ -47,6 +46,8 @@ class InputField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ThemeData color = Theme.of(context);
+
     return TextField(
       obscureText: obsecure == true ? true : false,
       autofocus: focus == true ? true : false,
@@ -67,12 +68,13 @@ class InputField extends StatelessWidget {
               counterText: '',
               isDense: true,
               filled: true,
-              fillColor: ThemeConfig.primaryColorLite,
-              contentPadding:
-                  const EdgeInsets.only(top: 10, bottom: 10, left: 20),
+              fillColor: color.backgroundColor,
+              // contentPadding:
+              //     const EdgeInsets.only(top: 10, bottom: 10, left: 20),
               hintText: hintText,
               labelText: labelText,
               hintStyle: TextStyle(
+                  // fontSize: 20,
                   color: isWhiteHintText == true
                       ? ThemeConfig.whiteColor
                       : ThemeConfig.mainTextColor),
@@ -105,13 +107,14 @@ class InputField extends StatelessWidget {
           : InputDecoration(
               isDense: true,
               filled: true,
-              fillColor: ThemeConfig.primaryColorLite,
+              fillColor: color.backgroundColor,
               contentPadding:
                   const EdgeInsets.only(top: 13, bottom: 13, left: 20),
               hintText: hintText,
               labelText: labelText,
               counterText: '',
-              hintStyle: const TextStyle(color: ThemeConfig.mainTextColor),
+              hintStyle: const TextStyle(
+                  color: ThemeConfig.mainTextColor, fontSize: 25),
               labelStyle: const TextStyle(
                   color: ThemeConfig.mainTextColor, fontSize: 20),
               alignLabelWithHint: true,

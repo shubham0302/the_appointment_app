@@ -30,6 +30,9 @@ class LoginScreen extends StatelessWidget {
                         Radius.circular(MediaQuery.of(context).size.width * .5),
                     bottomLeft: Radius.circular(
                         MediaQuery.of(context).size.width * .5))),
+            child: const Image(
+              image: AssetImage('assets/images/logo1.png'),
+            ),
             // child: const Image(
             //   image: AssetImage('assets/images/logo1.png'),
             // ),
@@ -37,7 +40,7 @@ class LoginScreen extends StatelessWidget {
           SH.large(),
           SH.large(),
           SH.large(),
-          GlobalPadding(
+          const GlobalPadding(
               child: Center(
             child: HeadingText(
               text: 'ADD YOUR CREDENTIALS',
@@ -48,29 +51,29 @@ class LoginScreen extends StatelessWidget {
           GlobalPadding(
               child: Row(
             children: [
-              Expanded(flex: 2, child: MainLabelText(text: 'EMAIL-')),
+              const Expanded(flex: 2, child: MainLabelText(text: 'EMAIL-')),
               SW.medium(),
-              Expanded(flex: 5, child: InputField(hintText: ''))
+              const Expanded(flex: 5, child: InputField(hintText: ''))
             ],
           )),
           SH.large(),
           GlobalPadding(
               child: Row(
             children: [
-              Expanded(flex: 2, child: MainLabelText(text: 'PASSWORD-')),
+              const Expanded(flex: 2, child: MainLabelText(text: 'PASSWORD-')),
               SW.medium(),
-              Expanded(flex: 5, child: InputField(hintText: ''))
+              const Expanded(flex: 5, child: InputField(hintText: ''))
             ],
           )),
-          GlobalPadding(
+          const GlobalPadding(
             child: Align(
                 alignment: Alignment.centerRight,
                 child: DescriptionText(text: 'FORGOT PASSWORD')),
           ),
           SH.large(),
           SH.large(),
-          Center(child: LabelText(text: 'DONT HAVE AN ACCOUNT ?')),
-          Center(child: MainLabelText(text: 'SIGNUP'))
+          const Center(child: LabelText(text: 'DONT HAVE AN ACCOUNT ?')),
+          const Center(child: MainLabelText(text: 'SIGNUP'))
         ],
       ),
     );

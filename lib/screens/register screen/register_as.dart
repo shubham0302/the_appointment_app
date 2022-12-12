@@ -52,9 +52,10 @@ class RegisterAsScreen extends StatelessWidget {
           SH.large(),
           SH.large(),
 
-          GestureDetector(onTap: (){
-            Get.toNamed('page');
-          },
+          GestureDetector(
+            onTap: () {
+              Get.toNamed('/login');
+            },
             child: GlobalPadding(
                 child: Column(
               children: [
@@ -76,10 +77,10 @@ class RegisterAsScreen extends StatelessWidget {
           ),
           SH.large(),
 
-          GestureDetector(onTap: (){
-            Get.toNamed('page');
-
-          },
+          GestureDetector(
+            onTap: () {
+              Get.toNamed('/login');
+            },
             child: GlobalPadding(
                 child: Column(
               children: [

@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:appointment_app/screens/customize_screen/screen.dart';
+import 'package:appointment_app/screens/intro_screen.dart';
 import 'package:appointment_app/screens/register%20screen/register_as.dart';
 import 'package:appointment_app/splash_screen.dart';
 import 'package:appointment_app/theme/theme_data.dart';
@@ -8,7 +9,6 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 import 'controllers/theme_controller.dart';
-
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
@@ -58,8 +58,6 @@ class Routes {
     GetPage(name: '/', page: () => const SplashScreen()),
     GetPage(name: '/customize', page: () => const CustomizeScreen()),
     GetPage(name: '/register-as', page: () => const RegisterAsScreen()),
-
-
-
+    GetPage(name: '/intro', page: () => const IntroScreen()),
   ];
 }

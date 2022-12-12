@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 import 'color_scheme.dart';
 
 class Styles {
@@ -35,7 +34,7 @@ class Styles {
 
         //Title Text
         headline2: TextStyle(
-          fontSize: 50.0,
+          fontSize: 40.0,
           fontWeight: FontWeight.bold,
           color: ColorSchemeData.defaultBrightColors['primaryText'],
         ),
@@ -125,7 +124,7 @@ class Styles {
 
         //Title Text
         headline2: TextStyle(
-          fontSize: 50.0,
+          fontSize: 40.0,
           fontWeight: FontWeight.bold,
           color: ColorSchemeData.defaultDarkColors['primaryText'],
         ),

@@ -6,6 +6,7 @@ import 'package:appointment_app/widgets/text_widget/description_text.dart';
 import 'package:appointment_app/widgets/text_widget/heading_text.dart';
 import 'package:appointment_app/widgets/text_widget/main_label_text.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../widgets/text_widget/label_text.dart';
 
@@ -65,10 +66,16 @@ class LoginScreen extends StatelessWidget {
               const Expanded(flex: 5, child: InputField(hintText: ''))
             ],
           )),
-          const GlobalPadding(
-            child: Align(
-                alignment: Alignment.centerRight,
-                child: DescriptionText(text: 'FORGOT PASSWORD')),
+          GestureDetector(
+            onTap: () {
+              Get.toNamed('/home');
+            },
+            behavior: HitTestBehavior.translucent,
+            child: const GlobalPadding(
+              child: Align(
+                  alignment: Alignment.centerRight,
+                  child: DescriptionText(text: 'FORGOT PASSWORD')),
+            ),
           ),
           SH.large(),
           SH.large(),

@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:appointment_app/screens/customize_screen/screen.dart';
+import 'package:appointment_app/screens/home_screen/home_screen.dart';
 import 'package:appointment_app/screens/intro_screen.dart';
 import 'package:appointment_app/screens/register%20screen/login_screen.dart';
 import 'package:appointment_app/screens/register%20screen/register_as.dart';
@@ -48,7 +49,7 @@ class MyApp extends StatelessWidget {
                 ? ThemeMode.dark
                 : ThemeMode.light,
         unknownRoute:
-            GetPage(name: '/notfound', page: () => const IntroScreen()),
+            GetPage(name: '/notfound', page: () => const HomeScreen()),
       ),
     );
   }
@@ -56,10 +57,11 @@ class MyApp extends StatelessWidget {
 
 class Routes {
   static final routes = [
-    GetPage(name: '/', page: () => const IntroScreen()),
+    GetPage(name: '/', page: () => const HomeScreen()),
     GetPage(name: '/customize', page: () => const CustomizeScreen()),
     GetPage(name: '/register-as', page: () => const RegisterAsScreen()),
     GetPage(name: '/intro', page: () => const IntroScreen()),
     GetPage(name: '/login', page: () => const LoginScreen()),
+    GetPage(name: '/home', page: () => const HomeScreen()),
   ];
 }
